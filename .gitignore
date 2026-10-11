@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# PyInstaller 产物
+build/
+dist/
+*.spec
+
+# 运行时日志（诊断开关生成）
+qtimer_overlay.log
+qtimer_ppt.log
+
+# 编辑器
+.vscode/
+.idea/
+*.swp

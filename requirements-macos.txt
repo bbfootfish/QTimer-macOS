@@ -1,0 +1,18 @@
+# QTimer-macOS 依赖清单（macOS）
+#
+# 安装：pip install -r requirements-macos.txt
+#
+# 说明：
+#   PySide6-Essentials   —— GUI 框架（含 QtCore / QtGui / QtWidgets / QtSvg）
+#   pyobjc-framework-Cocoa —— 补丁 3 需要：拿到 NSWindow 调整置顶层与 collectionBehavior
+#   pyobjc-framework-Quartz —— 补丁 4 需要：读取 CoreGraphics 窗口列表做放映检测
+#
+# 后两者缺失时程序仍能启动，但「全屏穿透」与「PPT 放映联动」会自动降级失效
+# （macos_overlay.py / macos_ppt_detect.py 内部有 try/except 兜底，不会崩溃）。
+
+PySide6-Essentials>=6.6
+pyobjc-framework-Cocoa>=10.0
+pyobjc-framework-Quartz>=10.0
+
+# 可选：全局热键（macOS 上需 root + 辅助功能授权，通常不装）
+# keyboard>=0.13.5
